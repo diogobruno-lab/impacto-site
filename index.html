@@ -3,200 +3,24 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Impacto Soluções — Plataforma Mobile Integrada ao Sankhya</title>
-<meta name="description" content="A Impacto Soluções Empresariais desenvolve a plataforma mobile que leva as rotinas comerciais do Sankhya ERP para o celular da sua equipe de vendas." />
-<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2220%22 fill=%22%232E86C8%22/><rect x=%2238%22 y=%2215%22 width=%2224%22 height=%2270%22 rx=%227%22 fill=%22%23163A63%22/></svg>" />
+<title>Impacto Soluções — Consultoria e produtos para quem usa Sankhya</title>
+<meta name="description" content="A Impacto Soluções Empresariais faz consultoria e personalizações em Sankhya ERP e desenvolve o Impacto ONE (comercial no celular) e o Impacto HUB (painéis, agente de IA e módulos)." />
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22100%22 height=%22100%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2220%22 fill=%22%232E86C8%22/><rect x=%2238%22 y=%2215%22 width=%2224%22 height=%2270%22 rx=%227%22 fill=%22%23163A63%22/></svg>" />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Fraunces:opsz,wght@9..144,500;9..144,600&display=swap" rel="stylesheet">
-<style>
-  :root{
-    --navy:#2F3D8C;
-    --navy-dark:#232f6e;
-    --teal:#348DA5;
-    --light-blue:#7BC4EA;
-    --cream:#F7F4EF;
-    --callout:#DDE4FA;
-    --text:#151823;
-    --gray:#5C6270;
-    --gray-light:#8B8F99;
-    --white:#FFFFFF;
-    --border:#E7E3DA;
-    --green:#3F9E63;
-  }
-  *{box-sizing:border-box;margin:0;padding:0;}
-  html{scroll-behavior:smooth;}
-  body{
-    font-family:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;
-    color:var(--text);
-    background:var(--white);
-    line-height:1.55;
-    -webkit-font-smoothing:antialiased;
-  }
-  .display{font-family:'Fraunces',Georgia,serif;}
-  img{max-width:100%;display:block;}
-  a{color:inherit;text-decoration:none;}
-  .wrap{max-width:1120px;margin:0 auto;padding:0 24px;}
-  section{padding:96px 0;}
-  @media (max-width:720px){ section{padding:64px 0;} }
-
-  /* Header */
-  header{
-    position:sticky;top:0;z-index:50;
-    background:rgba(255,255,255,0.92);
-    backdrop-filter:blur(10px);
-    border-bottom:1px solid var(--border);
-  }
-  header .wrap{display:flex;align-items:center;justify-content:space-between;padding-top:16px;padding-bottom:16px;}
-  .logo{display:flex;align-items:center;gap:10px;font-weight:800;font-size:19px;letter-spacing:-0.01em;}
-  .logo .mark{
-    width:34px;height:34px;border-radius:9px;
-    background:#2E86C8;
-    display:flex;align-items:center;justify-content:center;
-  }
-  .logo .mark .bar{width:9px;height:22px;border-radius:3px;background:#163A63;}
-  nav{display:flex;align-items:center;gap:36px;}
-  nav a{font-size:14.5px;font-weight:600;color:var(--gray);transition:color .15s;}
-  nav a:hover{color:var(--navy);}
-  .btn{
-    display:inline-flex;align-items:center;gap:8px;
-    padding:11px 22px;border-radius:10px;
-    font-weight:700;font-size:14.5px;
-    background:var(--navy);color:white;
-    transition:transform .15s, background .15s;
-    border:none;cursor:pointer;
-  }
-  .btn:hover{background:var(--navy-dark);transform:translateY(-1px);}
-  .btn.ghost{background:transparent;color:var(--navy);border:1.5px solid var(--navy);}
-  .btn.ghost:hover{background:var(--navy);color:white;}
-  nav .btn{padding:9px 18px;font-size:13.5px;}
-  .nav-links{display:flex;align-items:center;gap:28px;}
-  @media (max-width:780px){ .nav-links a:not(.btn){display:none;} }
-
-  /* Hero */
-  .hero{
-    padding:100px 0 80px;
-    background:
-      radial-gradient(1100px 500px at 85% -10%, rgba(123,196,234,0.28), transparent 60%),
-      radial-gradient(900px 500px at -10% 10%, rgba(47,61,140,0.06), transparent 55%);
-  }
-  .hero-grid{display:grid;grid-template-columns:1.05fr 0.95fr;gap:64px;align-items:center;}
-  @media (max-width:900px){ .hero-grid{grid-template-columns:1fr;gap:48px;} }
-  .eyebrow{
-    display:inline-flex;align-items:center;gap:8px;
-    font-size:12.5px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;
-    color:var(--teal);background:rgba(52,141,165,0.1);
-    padding:6px 14px;border-radius:999px;margin-bottom:22px;
-  }
-  h1{
-    font-family:'Fraunces',Georgia,serif;
-    font-weight:600;
-    font-size:clamp(36px,5vw,54px);
-    line-height:1.08;letter-spacing:-0.01em;
-    color:var(--navy-dark);
-    margin-bottom:22px;
-  }
-  h1 em{font-style:italic;color:var(--teal);}
-  .hero p.lead{font-size:18px;color:var(--gray);max-width:520px;margin-bottom:34px;}
-  .hero-actions{display:flex;gap:14px;flex-wrap:wrap;}
-
-  .phone-stack{position:relative;display:flex;justify-content:center;}
-  .phone-stack img{
-    width:78%;border-radius:26px;box-shadow:0 30px 70px -20px rgba(35,47,110,0.35), 0 0 0 8px white;
-  }
-  .phone-stack img.back{
-    position:absolute;right:0;top:34px;width:60%;opacity:.92;filter:saturate(.9);
-    box-shadow:0 30px 70px -25px rgba(35,47,110,0.3), 0 0 0 8px white;
-  }
-  .phone-stack img.front{position:relative;z-index:2;}
-
-  /* Trust strip */
-  .trust{border-top:1px solid var(--border);border-bottom:1px solid var(--border);background:var(--cream);}
-  .trust .wrap{padding:26px 24px;display:flex;flex-wrap:wrap;gap:14px 40px;align-items:center;justify-content:center;}
-  .trust span{font-size:13.5px;font-weight:600;color:var(--gray);display:flex;align-items:center;gap:8px;}
-  .trust span::before{content:"";width:6px;height:6px;border-radius:999px;background:var(--green);}
-
-  /* Section heading */
-  .section-head{max-width:640px;margin-bottom:52px;}
-  .section-head .eyebrow{margin-bottom:16px;}
-  h2{
-    font-family:'Fraunces',Georgia,serif;font-weight:600;
-    font-size:clamp(28px,3.4vw,38px);color:var(--navy-dark);
-    letter-spacing:-0.01em;margin-bottom:14px;
-  }
-  .section-head p{color:var(--gray);font-size:16.5px;}
-
-  /* Modules grid */
-  .modules{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border);border:1px solid var(--border);border-radius:16px;overflow:hidden;}
-  @media (max-width:860px){ .modules{grid-template-columns:repeat(2,1fr);} }
-  @media (max-width:560px){ .modules{grid-template-columns:1fr;} }
-  .module{background:white;padding:32px 28px;}
-  .module .num{font-size:12.5px;font-weight:800;color:var(--teal);letter-spacing:.06em;margin-bottom:14px;display:block;}
-  .module h3{font-size:17px;font-weight:700;margin-bottom:10px;color:var(--navy-dark);}
-  .module p{font-size:14.5px;color:var(--gray);}
-
-  /* Diferenciais */
-  .dif-section{background:var(--navy-dark);color:white;}
-  .dif-section .eyebrow{background:rgba(123,196,234,.18);color:var(--light-blue);}
-  .dif-section h2{color:white;}
-  .dif-section .section-head p{color:rgba(255,255,255,0.7);}
-  .dif-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:28px 40px;}
-  @media (max-width:720px){ .dif-grid{grid-template-columns:1fr;} }
-  .dif-item{display:flex;gap:16px;}
-  .dif-item .ic{
-    flex:none;width:40px;height:40px;border-radius:11px;
-    background:rgba(123,196,234,.16);
-    display:flex;align-items:center;justify-content:center;
-    color:var(--light-blue);font-weight:800;font-family:'Fraunces',serif;
-  }
-  .dif-item h4{font-size:16px;font-weight:700;margin-bottom:6px;}
-  .dif-item p{font-size:14.5px;color:rgba(255,255,255,0.65);}
-
-  /* CTA */
-  .cta{background:var(--cream);}
-  .cta-box{
-    background:linear-gradient(135deg,var(--navy),var(--navy-dark));
-    border-radius:24px;padding:64px 56px;color:white;
-    display:flex;justify-content:space-between;align-items:center;gap:32px;
-    position:relative;overflow:hidden;
-  }
-  .cta-box::after{
-    content:"";position:absolute;right:-60px;top:-60px;width:260px;height:260px;border-radius:50%;
-    background:radial-gradient(circle,rgba(123,196,234,.35),transparent 70%);
-  }
-  @media (max-width:760px){ .cta-box{flex-direction:column;text-align:center;padding:48px 32px;} }
-  .cta-box h2{color:white;margin-bottom:10px;}
-  .cta-box p{color:rgba(255,255,255,0.75);font-size:16px;max-width:440px;}
-  .cta-box .btn{background:white;color:var(--navy-dark);flex:none;}
-  .cta-box .btn:hover{background:var(--cream);}
-
-  /* Contact / Footer */
-  footer{background:white;border-top:1px solid var(--border);}
-  .foot-grid{display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:48px;padding-bottom:56px;}
-  @media (max-width:760px){ .foot-grid{grid-template-columns:1fr;gap:36px;} }
-  .foot-brand .logo{margin-bottom:16px;}
-  .foot-brand p{color:var(--gray);font-size:14.5px;max-width:280px;}
-  .foot-col h5{font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--gray-light);margin-bottom:16px;}
-  .foot-col a, .foot-col .row{display:block;font-size:14.5px;color:var(--text);margin-bottom:12px;font-weight:500;}
-  .foot-col a:hover{color:var(--teal);}
-  .foot-bottom{border-top:1px solid var(--border);padding:24px 0;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;}
-  .foot-bottom p{font-size:13px;color:var(--gray-light);}
-
-  ::selection{background:var(--callout);}
-</style>
+<link rel="stylesheet" href="/assets/site.css" />
 </head>
 <body>
 
 <header>
   <div class="wrap">
-    <a href="#" class="logo"><span class="mark"><span class="bar"></span></span>Impacto Soluções</a>
-    <nav>
-      <div class="nav-links">
-        <a href="#produto">Produto</a>
-        <a href="#modulos">Módulos</a>
-        <a href="#diferenciais">Diferenciais</a>
-        <a href="#contato" class="btn">Fale conosco</a>
-      </div>
+    <a href="/" class="logo"><span class="mark"><span class="bar"></span></span>Impacto Soluções</a>
+    <nav class="nav-links">
+      <a href="/#consultoria">Consultoria</a>
+      <a href="/one">Impacto ONE</a>
+      <a href="/hub">Impacto HUB</a>
+      <a href="#contato" class="btn">Fale conosco</a>
     </nav>
   </div>
 </header>
@@ -204,102 +28,90 @@
 <section class="hero">
   <div class="wrap hero-grid">
     <div>
-      <span class="eyebrow">Plataforma mobile · integrada ao Sankhya</span>
-      <h1>A operação comercial da sua equipe, <em>direto no bolso</em>.</h1>
-      <p class="lead">Levamos pedidos, clientes, estoque e indicadores do seu ERP Sankhya para o celular — com os mesmos dados, as mesmas regras, e a agilidade que o dia a dia comercial exige — em campo ou no atendimento interno.</p>
+      <span class="eyebrow">Consultoria · produtos · Sankhya ERP</span>
+      <h1>O seu Sankhya, <em>trabalhando a favor</em> da operação.</h1>
+      <p class="lead">Ajustamos o ERP às regras da sua empresa e levamos os dados dele para onde as decisões acontecem: no celular de quem vende e nos painéis de quem gere — com os mesmos números e as mesmas regras.</p>
       <div class="hero-actions">
-        <a href="#contato" class="btn">Solicitar apresentação</a>
-        <a href="#produto" class="btn ghost">Ver como funciona</a>
+        <a href="#frentes" class="btn">Conheça o que fazemos</a>
+        <a href="https://wa.me/5531998190810?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Impacto." class="btn ghost" target="_blank" rel="noopener">Falar no WhatsApp</a>
       </div>
     </div>
-    <div class="phone-stack">
-      <img class="back" src="assets/pedidos.png" alt="Tela de pedidos do aplicativo Impacto" />
-      <img class="front" src="assets/dashboard.png" alt="Dashboard comercial do aplicativo Impacto" />
+    <div class="combo" aria-hidden="true">
+      <div class="hub-window">
+        <div class="hw-bar"><i></i><i></i><i></i><b>Impacto HUB · Comercial</b></div>
+        <div class="hw-body">
+          <div class="hw-kpis">
+            <div><small>Faturamento</small><strong>R$ 4,8 mi</strong><em>+8,4% no ano</em></div>
+            <div><small>Margem</small><strong>27,1%</strong><em>+1,2 p.p.</em></div>
+            <div><small>Ticket médio</small><strong>R$ 3.420</strong><em class="down">−2,1%</em></div>
+          </div>
+          <div class="hw-chart">
+            <small>Vendas por mês · este ano × anterior</small>
+            <div class="hw-bars">
+              <span class="prev" style="height:48%"></span><span style="height:55%"></span>
+              <span class="prev" style="height:52%"></span><span style="height:63%"></span>
+              <span class="prev" style="height:58%"></span><span style="height:70%"></span>
+              <span class="prev" style="height:61%"></span><span style="height:82%"></span>
+              <span class="prev" style="height:66%"></span><span style="height:91%"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <img class="phone" src="/assets/dashboard.png" alt="" />
     </div>
   </div>
 </section>
 
 <div class="trust">
   <div class="wrap">
-    <span>Integração real com Sankhya ERP</span>
-    <span>Multiempresa por padrão</span>
-    <span>Perfis de vendedor, gerente e diretor</span>
-    <span>Dados vivos, sem planilha paralela</span>
+    <span>Especialistas em Sankhya ERP</span>
+    <span>Dados vivos, direto do seu ERP</span>
+    <span>Critérios conferidos com os seus relatórios</span>
+    <span>Atendimento direto com quem constrói</span>
   </div>
 </div>
 
-<section id="produto">
+<section id="frentes">
   <div class="wrap">
     <div class="section-head">
-      <span class="eyebrow">O produto</span>
-      <h2>Mais do que lançar pedidos.</h2>
-      <p>Uma central comercial móvel para consultar, decidir e agir — com informações reais do Sankhya, não uma cópia defasada delas.</p>
+      <span class="eyebrow">O que fazemos</span>
+      <h2>Três frentes, um só conhecimento do seu ERP.</h2>
+      <p>A consultoria entende as regras do seu negócio. Os produtos põem essas regras para trabalhar — no campo, na gestão e na rotina do escritório.</p>
     </div>
-  </div>
-</section>
-
-<section id="modulos" style="padding-top:0;">
-  <div class="wrap">
-    <div class="modules">
-      <div class="module">
-        <span class="num">01</span>
-        <h3>Pedidos e orçamentos</h3>
-        <p>Consulta, criação, edição, confirmação e progressão — do orçamento ao pedido faturado.</p>
+    <div class="pillars">
+      <div class="pillar" id="consultoria">
+        <span class="tag">Consultoria</span>
+        <h3>Sankhya sob medida</h3>
+        <p>Do ajuste de processo à regra escrita em código, para o ERP seguir o jeito que a sua empresa trabalha.</p>
+        <ul>
+          <li>Evolução e parametrização do Sankhya</li>
+          <li>Personalizações: eventos, botões de ação e regras de negócio</li>
+          <li>Relatórios, dashboards e integrações por API</li>
+          <li>Sustentação e apoio ao time interno</li>
+        </ul>
+        <a href="#contato" class="more">Falar com um consultor</a>
       </div>
-      <div class="module">
-        <span class="num">02</span>
-        <h3>Clientes — visão 360°</h3>
-        <p>Cadastro, financeiro, histórico de compras e principais produtos, tudo num só lugar.</p>
+      <div class="pillar">
+        <span class="tag">Impacto ONE</span>
+        <h3>O comercial no celular</h3>
+        <p>Pedidos, clientes, estoque e indicadores do Sankhya no bolso da equipe de vendas — em campo ou no atendimento interno.</p>
+        <ul>
+          <li>Pedidos e orçamentos do início ao faturamento</li>
+          <li>Roteirização, agenda e check-in de visitas</li>
+          <li>Funciona sem sinal e aceita pedido por voz</li>
+        </ul>
+        <a href="/one" class="more">Conhecer o ONE</a>
       </div>
-      <div class="module">
-        <span class="num">03</span>
-        <h3>Produtos e estoque</h3>
-        <p>Busca em tempo real, estoque por empresa e local, preço e desconto aplicados na hora.</p>
-      </div>
-      <div class="module">
-        <span class="num">04</span>
-        <h3>Dashboard comercial</h3>
-        <p>Vendas do período, ticket médio, tendência mensal e quebra por vendedor pra gestão.</p>
-      </div>
-      <div class="module">
-        <span class="num">05</span>
-        <h3>Crédito e liberações</h3>
-        <p>Bloqueios, motivos e responsáveis exibidos claramente, direto das regras do Sankhya.</p>
-      </div>
-      <div class="module">
-        <span class="num">06</span>
-        <h3>Segurança e perfis</h3>
-        <p>Vendedor, gerente e diretor — cada um com o escopo de dados certo, direto na regra de negócio.</p>
-      </div>
-      <div class="module">
-        <span class="num">07</span>
-        <h3>Roteirização inteligente</h3>
-        <p>Rotas otimizadas automaticamente, prévia no mapa antes de sair, check-in e check-out com GPS e foto em cada cliente visitado.</p>
-      </div>
-      <div class="module">
-        <span class="num">08</span>
-        <h3>Agenda de visitas</h3>
-        <p>Calendário mensal, semanal e diário pra planejar visitas futuras, com lembrete automático no horário que o vendedor escolher.</p>
-      </div>
-      <div class="module">
-        <span class="num">09</span>
-        <h3>Funciona sem sinal</h3>
-        <p>Cliente, catálogo e pedido ficam em cache no aparelho — o vendedor lança offline e tudo sincroniza sozinho quando a conexão volta.</p>
-      </div>
-      <div class="module">
-        <span class="num">10</span>
-        <h3>Pedido por voz</h3>
-        <p>O vendedor grava narrando o pedido, a IA transcreve e monta tudo — confirmação em segundos, sem digitar item por item.</p>
-      </div>
-      <div class="module">
-        <span class="num">11</span>
-        <h3>Confirmação por WhatsApp</h3>
-        <p>O cliente recebe a confirmação do pedido direto no WhatsApp da própria empresa, sem esforço manual do vendedor.</p>
-      </div>
-      <div class="module">
-        <span class="num">12</span>
-        <h3>Oportunidades — funil de vendas</h3>
-        <p>CRM enxuto embutido no app: funil com estágios (novo lead, contato feito, proposta enviada, negociação, ganho ou perdido), upsell sobre clientes já cadastrados e forecast ponderado por estágio pra gestão acompanhar o pipeline.</p>
+      <div class="pillar">
+        <span class="tag">Impacto HUB</span>
+        <h3>Gestão, IA e módulos</h3>
+        <p>Painéis com o critério da sua casa, um agente de IA que responde sobre os seus números e módulos que tiram rotinas do papel.</p>
+        <ul>
+          <li>Painéis comercial, financeiro, compras e estoque</li>
+          <li>Agente de IA que consulta o seu ERP</li>
+          <li>Aprovações, requisição, cotação, acerto de viagem e mais</li>
+        </ul>
+        <a href="/hub" class="more">Conhecer o HUB</a>
       </div>
     </div>
   </div>
@@ -309,36 +121,36 @@
   <div class="wrap">
     <div class="section-head">
       <span class="eyebrow">Por que Impacto</span>
-      <h2>Feito sob medida pra quem vive de Sankhya.</h2>
-      <p>Não é um aplicativo genérico adaptado — é construído em torno das regras reais do seu ERP.</p>
+      <h2>Feito por quem vive de Sankhya.</h2>
+      <p>Não é ferramenta genérica adaptada: tudo é construído em torno das regras reais do seu ERP.</p>
     </div>
     <div class="dif-grid">
       <div class="dif-item">
         <div class="ic">S</div>
         <div>
           <h4>Conhecimento profundo do Sankhya</h4>
-          <p>Anos de consultoria em ERP se traduzem em integrações que respeitam as regras de negócio do cliente, não as ignoram.</p>
+          <p>Anos de consultoria em ERP viram integrações que respeitam as regras de negócio do cliente, em vez de contorná-las.</p>
+        </div>
+      </div>
+      <div class="dif-item">
+        <div class="ic">C</div>
+        <div>
+          <h4>O número bate com o seu relatório</h4>
+          <p>Cada indicador é conferido contra o relatório que a sua empresa já usa antes de ser liberado. Divergência é tratada como defeito.</p>
         </div>
       </div>
       <div class="dif-item">
         <div class="ic">A</div>
         <div>
           <h4>Atendimento próximo</h4>
-          <p>Contato direto com a equipe responsável pelo produto — sem central de suporte terceirizada.</p>
+          <p>Você fala direto com quem constrói e mantém o produto — sem central de suporte terceirizada.</p>
         </div>
       </div>
       <div class="dif-item">
         <div class="ic">M</div>
         <div>
           <h4>Multiempresa por padrão</h4>
-          <p>Preparado desde o início pra diferentes ambientes, parametrizações e estruturas societárias.</p>
-        </div>
-      </div>
-      <div class="dif-item">
-        <div class="ic">E</div>
-        <div>
-          <h4>Evolução contínua</h4>
-          <p>Produto vivo, evoluindo com quem usa — não um aplicativo estático desconectado da operação real.</p>
+          <p>Preparado para vários ambientes, parametrizações e estruturas societárias, com permissão por empresa e por pessoa.</p>
         </div>
       </div>
     </div>
@@ -349,39 +161,55 @@
   <div class="wrap">
     <div class="cta-box">
       <div>
-        <h2>Quer ver funcionando na prática?</h2>
-        <p>Marcamos uma apresentação rápida, com dados reais do seu ambiente Sankhya.</p>
+        <h2>Vamos conversar sobre o seu Sankhya?</h2>
+        <p>Mostramos o ONE e o HUB funcionando com os dados do seu próprio ambiente, ou conversamos sobre o ajuste que a sua operação precisa.</p>
       </div>
-      <a href="mailto:contato@impactosolucoes.com?subject=Quero%20conhecer%20a%20plataforma%20Impacto" class="btn">Falar com a Impacto</a>
+      <div class="cta-actions">
+        <a href="https://wa.me/5531998190810?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Impacto." class="btn whats" target="_blank" rel="noopener">WhatsApp</a>
+        <a href="mailto:contato@impactosolucoes.com?subject=Quero%20conhecer%20a%20Impacto" class="btn light">E-mail</a>
+      </div>
     </div>
   </div>
 </section>
 
 <footer id="contato">
-  <div class="wrap" style="padding-top:64px;">
+  <div class="wrap">
     <div class="foot-grid">
       <div class="foot-brand">
-        <a href="#" class="logo"><span class="mark"><span class="bar"></span></span>Impacto Soluções</a>
-        <p>Plataforma mobile integrada ao Sankhya ERP, para equipes comerciais que precisam de mobilidade sem abrir mão de controle.</p>
+        <a href="/" class="logo"><span class="mark"><span class="bar"></span></span>Impacto Soluções</a>
+        <p>Consultoria, personalizações e produtos para empresas que usam o Sankhya ERP.</p>
+      </div>
+      <div class="foot-col">
+        <h5>Produtos</h5>
+        <a href="/one">Impacto ONE</a>
+        <a href="/hub">Impacto HUB</a>
+        <a href="/#consultoria">Consultoria</a>
       </div>
       <div class="foot-col">
         <h5>Contato</h5>
         <a href="mailto:contato@impactosolucoes.com">contato@impactosolucoes.com</a>
-        <a href="tel:+5531998190810">(31) 99819-0810</a>
+        <a href="https://wa.me/5531998190810" target="_blank" rel="noopener">(31) 99819-0810 · WhatsApp</a>
         <span class="row">Belo Horizonte — MG</span>
       </div>
       <div class="foot-col">
         <h5>Empresa</h5>
         <span class="row">Impacto Soluções Empresariais LTDA</span>
-        <span class="row">Consultoria e desenvolvimento em Sankhya ERP</span>
+        <span class="row">CNPJ 26.641.438/0001-42</span>
+        <a href="/privacidade">Política de Privacidade</a>
+        <a href="/termos">Termos de Uso</a>
+        <a href="/exclusao-de-dados">Exclusão de dados</a>
       </div>
     </div>
     <div class="foot-bottom">
       <p>© 2026 Impacto Soluções Empresariais LTDA. Todos os direitos reservados.</p>
-      <p><a href="privacidade.html" style="color:var(--gray-light);">Política de Privacidade</a></p>
+      <p>Sankhya é marca de seus respectivos titulares.</p>
     </div>
   </div>
 </footer>
+
+<a class="whats-float" href="https://wa.me/5531998190810?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Impacto." target="_blank" rel="noopener" aria-label="Falar com a Impacto no WhatsApp">
+  <img src="/assets/whatsapp.svg" alt="" />
+</a>
 
 </body>
 </html>
